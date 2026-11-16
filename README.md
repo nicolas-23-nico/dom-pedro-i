@@ -6,11 +6,10 @@ Site institucional da Escola Estadual Dom Pedro I, localizada em São Miguel Pau
 
 Este site foi desenvolvido para apresentar a escola, seus níveis de ensino e facilitar a comunicação com a comunidade. O design é moderno, responsivo e focado em uma experiência de usuário agradável.
 
-## 📚 Níveis de Ensino
+## 📚 Níveis e Programas de Ensino
 
 - **Centro de Estudos de Línguas (CEL)**: Desenvolvimento de línguas estrangeiras
-- **Ensino Médio**: Preparação acadêmica e profissional
-- **Ensino Técnico**: Formação profissionalizante
+- **Ensino Médio**: Preparação acadêmica e profissional com foco no projeto de vida
 
 ## 🛠️ Tecnologias Utilizadas
 
