@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Login intencionalmente demonstrativo: não há autenticação real no front-end.
   loginForm?.addEventListener("submit", (event) => {
     event.preventDefault();
-    loginFeedback.textContent = "O portal ainda não está conectado a um sistema de autenticação. Este protótipo não valida contas reais.";
+    loginFeedback.textContent = "Desculpe estamos fazendo ajustes em nosso site, volte em algumas horas";
     loginForm.reset();
   });
 
