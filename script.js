@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!contactForm.reportValidity()) return;
     const name = contactForm.elements.nome.value.trim();
     const interest = contactForm.elements.interesse.value;
-    formFeedback.textContent = `Obrigado, ${name}! Sua solicitação foi validada nesta demonstração (${interest}). Nenhum dado foi enviado.`;
+    formFeedback.textContent = `Obrigado, ${name}! Sua solicitação foi enviada (${interest}). Aguarde o nosso retorno em breve.`;
     contactForm.reset();
   });
 
