@@ -166,8 +166,18 @@
   .gallery-card { margin: 0; display: flex; flex-direction: column; background: white; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: 0 4px 16px rgba(18, 48, 74, 0.04); transition: var(--transition); }
   .gallery-card:hover { transform: translateY(-6px); border-color: #c7d9d0; box-shadow: var(--shadow-hover); }
   .gallery-image-wrapper { overflow: hidden; height: 230px; position: relative; background: #eef2eb; }
-  .gallery-item { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 0; transition: transform 0.4s ease; }
+  .gallery-item { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 0; transition: transform 0.4s ease; cursor: pointer; }
   .gallery-card:hover .gallery-item { transform: scale(1.06); }
+  .lightbox { position: fixed; inset: 0; z-index: 3000; display: none; align-items: center; justify-content: center; padding: 20px; }
+  .lightbox.is-open { display: flex; }
+  .lightbox-backdrop { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.9); backdrop-filter: blur(5px); }
+  .lightbox-content { position: relative; z-index: 1; max-width: 90vw; max-height: 90vh; display: flex; flex-direction: column; align-items: center; }
+  .lightbox-image { max-width: 100%; max-height: 70vh; object-fit: contain; border-radius: 12px; }
+  .lightbox-close { position: absolute; top: -50px; right: 0; width: 40px; height: 40px; border: 0; border-radius: 50%; background: white; color: var(--navy); font-size: 28px; cursor: pointer; transition: var(--transition); }
+  .lightbox-close:hover { background: var(--gold); }
+  .lightbox-caption { margin-top: 20px; text-align: center; color: white; max-width: 600px; }
+  .lightbox-caption h3 { margin: 0 0 10px; font-size: 24px; }
+  .lightbox-caption p { margin: 0; font-size: 14px; line-height: 1.6; opacity: 0.9; }
   .gallery-caption { padding: 18px 20px 22px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1; }
   .gallery-tag { align-self: flex-start; font: 800 10px "Manrope", sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--blue); background: var(--cream); padding: 4px 10px; border-radius: 999px; }
   .gallery-caption h3 { margin: 2px 0 0; color: var(--navy); font-size: 18px; letter-spacing: -.02em; }

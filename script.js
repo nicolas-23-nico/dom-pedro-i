@@ -107,4 +107,46 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   }
+
+  // Lightbox para galeria de imagens
+  const lightbox = document.querySelector("#lightbox");
+  const lightboxImage = document.querySelector("#lightbox-image");
+  const lightboxTitle = document.querySelector("#lightbox-title");
+  const lightboxDescription = document.querySelector("#lightbox-description");
+  const lightboxBackdrop = document.querySelector("#lightbox-backdrop");
+  const lightboxClose = document.querySelector("#lightbox-close");
+  const galleryItems = document.querySelectorAll(".gallery-item");
+
+  function openLightbox(src, caption, description) {
+    if (!lightbox) return;
+    lightboxImage.src = src;
+    lightboxTitle.textContent = caption;
+    lightboxDescription.textContent = description;
+    lightbox.classList.add("is-open");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+  }
+
+  function closeLightbox() {
+    if (!lightbox) return;
+    lightbox.classList.remove("is-open");
+    lightbox.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
+    lightboxImage.src = "";
+  }
+
+  galleryItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      const src = item.src;
+      const caption = item.dataset.caption || "";
+      const description = item.dataset.description || "";
+      openLightbox(src, caption, description);
+    });
+  });
+
+  lightboxClose?.addEventListener("click", closeLightbox);
+  lightboxBackdrop?.addEventListener("click", closeLightbox);
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && lightbox?.classList.contains("is-open")) closeLightbox();
+  });
 });

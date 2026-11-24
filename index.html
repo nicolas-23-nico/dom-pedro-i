@@ -150,7 +150,7 @@
         <div class="gallery-grid">
           <figure class="gallery-card">
             <div class="gallery-image-wrapper">
-              <img class="gallery-item" src="imagens/patio.jpg" alt="Plateia do Auditório da E.E Dom Pedro I" loading="lazy">
+              <img class="gallery-item" src="imagens/patio.jpg" alt="Plateia do Auditório da E.E Dom Pedro I" loading="lazy" data-caption="Teatro & Auditório" data-description="Palco amplo com cortinas teatrais, telão e estrutura para assembleias, palestras e apresentações culturais.">
             </div>
             <figcaption class="gallery-caption">
               <span class="gallery-tag">Cultura & Eventos</span>
@@ -161,7 +161,7 @@
 
           <figure class="gallery-card">
             <div class="gallery-image-wrapper">
-              <img class="gallery-item" src="imagens/informatica.jpg" alt="Laboratório de Informática da E.E Dom Pedro I" loading="lazy">
+              <img class="gallery-item" src="imagens/informatica.jpg" alt="Laboratório de Informática da E.E Dom Pedro I" loading="lazy" data-caption="Laboratório de Informática" data-description="Estações de computadores modernas e conectadas para projetos digitais, aulas interativas e pesquisas.">
             </div>
             <figcaption class="gallery-caption">
               <span class="gallery-tag">Tecnologia & Inovação</span>
@@ -172,7 +172,7 @@
 
           <figure class="gallery-card">
             <div class="gallery-image-wrapper">
-              <img class="gallery-item" src="imagens/sala-leitura.jpg" alt="Sala de Leitura da E.E Dom Pedro I" loading="lazy">
+              <img class="gallery-item" src="imagens/sala-leitura.jpg" alt="Sala de Leitura da E.E Dom Pedro I" loading="lazy" data-caption="Sala de Leitura" data-description="Ambiente acolhedor com computadores portáteis, mesas para estudo em grupo e amplo acervo de livros.">
             </div>
             <figcaption class="gallery-caption">
               <span class="gallery-tag">Leitura & Pesquisa</span>
@@ -183,7 +183,7 @@
 
           <figure class="gallery-card">
             <div class="gallery-image-wrapper">
-              <img class="gallery-item" src="imagens/extra-2.jpg" alt="Quadra Poliesportiva Coberta da E.E Dom Pedro I" loading="lazy">
+              <img class="gallery-item" src="imagens/extra-2.jpg" alt="Quadra Poliesportiva Coberta da E.E Dom Pedro I" loading="lazy" data-caption="Quadra Poliesportiva" data-description="Espaço coberto e seguro para educação física, treinos, campeonatos escolares e atividades esportivas.">
             </div>
             <figcaption class="gallery-caption">
               <span class="gallery-tag">Esporte & Saúde</span>
@@ -194,7 +194,7 @@
 
           <figure class="gallery-card">
             <div class="gallery-image-wrapper">
-              <img class="gallery-item" src="imagens/refeitorio.jpg" alt="Refeitório da E.E Dom Pedro I" loading="lazy">
+              <img class="gallery-item" src="imagens/refeitorio.jpg" alt="Refeitório da E.E Dom Pedro I" loading="lazy" data-caption="Refeitório Escolar" data-description="Espaço higienizado e dedicado ao momento da merenda balanceada e à convivência harmônica entre estudantes.">
             </div>
             <figcaption class="gallery-caption">
               <span class="gallery-tag">Convivência</span>
@@ -205,7 +205,7 @@
 
           <figure class="gallery-card">
             <div class="gallery-image-wrapper">
-              <img class="gallery-item" src="imagens/d634811f-abba-44b7-8645-a33509351014.jpg" alt="Laboratório de Ciências da E.E Dom Pedro I" loading="lazy">
+              <img class="gallery-item" src="imagens/d634811f-abba-44b7-8645-a33509351014.jpg" alt="Laboratório de Ciências da E.E Dom Pedro I" loading="lazy" data-caption="Laboratório de Ciências" data-description="Espaço equipado para práticas experimentais, permitindo aos estudantes explorar o mundo científico através de atividades hands-on.">
             </div>
             <figcaption class="gallery-caption">
               <span class="gallery-tag">Ciência & Experimentação</span>
@@ -309,5 +309,17 @@
     </section>
   </div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Fechar">×</button>
+      <img class="lightbox-image" id="lightbox-image" src="" alt="">
+      <div class="lightbox-caption">
+        <h3 id="lightbox-title"></h3>
+        <p id="lightbox-description"></p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
